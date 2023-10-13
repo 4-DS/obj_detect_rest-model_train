@@ -2,23 +2,40 @@
     "pipeline_params":
     {
         "env_name":"user",
-        "pipeline_name":"pipeline",
-        "zone_name":"zone",
-        "X": "something"
+        "pipeline_name":"yolox_mmdet",
+        "zone_name":"test"
     },
     "step_params":
     {
-        "Y": "something_else",
-        "step_name": "step_template"
+        "step_name": "2_model_train"
     },
     "substeps_params":
     [
         {
-            "substep_name":"substep_full.ipynb",
+            "substep_name":"0_cache_datasets.ipynb",
             "params":
             {
-                "param1":"None1",
-                "param2":"None2"
+            }
+        },
+        {
+            "substep_name":"1_configure_train.ipynb",
+            "params":
+            {
+                "MAX_SIZE"     : 640,
+                "BATCH"        : 8,
+                "WORKERS"      : 0,
+                "SEED"         : 42,
+                "EPOCH_COUNT"  : 5,
+                "MODEL_NAME"   : "yolox_s",
+                "optimizer_lr" : 0.001,
+                "pretrain_weights": "https://download.openmmlab.com/mmdetection/v2.0/yolox/yolox_s_8x8_300e_coco/yolox_s_8x8_300e_coco_20211121_095711-4592a793.pth"
+            }
+        },
+        {
+            "substep_name":"2_train.ipynb",
+            "params":
+            {
+                 "SEED"         : 42
             }
         }
     ]

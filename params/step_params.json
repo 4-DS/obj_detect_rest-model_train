@@ -13,13 +13,13 @@
     [
         {
             "substep_name":"0_cache_datasets.ipynb",
-            "params":
+            "substep_params":
             {
             }
         },
         {
             "substep_name":"1_configure_train.ipynb",
-            "params":
+            "substep_params":
             {
                 "MAX_SIZE"     : 640,
                 "BATCH"        : 8,
@@ -33,7 +33,7 @@
         },
         {
             "substep_name":"2_train.ipynb",
-            "params":
+            "substep_params":
             {
                  "SEED"         : 42
             }

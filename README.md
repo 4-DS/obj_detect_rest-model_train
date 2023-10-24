@@ -1,3 +1,5 @@
+![interface model_train_interface.drawio](./imgs/model_train_interface.drawio.png)
+
 # step_template
 
 Prerequisites

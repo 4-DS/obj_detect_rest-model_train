@@ -7,28 +7,39 @@
 Создается на основе [шаблона](https://github.com/4-DS/step_template).
 Чтобы не забывать про обязательные ячейки в каждом ноутбуке, проще всего создавать новые ноутбуки просто копированием [`substep_full.ipynb`](https://github.com/4-DS/step_template/blob/main/substep_full.ipynb) из стандартного [шаблона](https://github.com/4-DS/step_template) компоненты.
 
+Входные данные для step CV-Pipeline: model_train
+- **train_data**     
+Тренировочный датасет изображений, сохраненный в parquets
+
+- **eval_data**     
+Валидационный датасет изображений, сохраненный в parquets
+
+- **train_eval_config**     
+Аннотациии тренировочного и валидационного датасета изображения
+
 Конечным выходом работы данного step CV-Pipeline является
 - **model**     
 Сохраненные веса обученной модели (веса последней эпохи и с лучшими достигнутыми метриками), конфигурационные файлы
 
-## Add sinara
+## How to run CV-Pipeline step
+
+### create directory for project
+```
+mkdir yolox_mmdet
+cd yolox_mmdet
+```  
 
 ### clone repository 
 ```
-git clone https://gitlab.com/yolox_mmdet/model_train.git
-cd data_load
+git clone --recurse-submodules https://gitlab.com/yolox_mmdet/model_train.git {model_train}
+cd model_train
 ```  
 
-### add sinara module  
+### run step
 ```
-git submodule add https://github.com/4-DS/sinara.git sinara
+python step.dev.py
 ```  
-
-### init DSML module  
+or
 ```
-git submodule init
-```
-
-### update to latest DSML module
-```
-git submodule update --remote --merge
+step.prod.py
+``` 

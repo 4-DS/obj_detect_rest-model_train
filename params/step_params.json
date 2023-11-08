@@ -22,10 +22,10 @@
             "substep_params":
             {
                 "MAX_SIZE"     : 640,
-                "BATCH"        : 8,
+                "BATCH"        : 32,
                 "WORKERS"      : 0,
                 "SEED"         : 42,
-                "EPOCH_COUNT"  : 2,
+                "EPOCH_COUNT"  : 10,
                 "MODEL_NAME"   : "yolox_s",
                 "optimizer_lr" : 0.001,
                 "pretrain_weights": "https://download.openmmlab.com/mmdetection/v2.0/yolox/yolox_s_8x8_300e_coco/yolox_s_8x8_300e_coco_20211121_095711-4592a793.pth"

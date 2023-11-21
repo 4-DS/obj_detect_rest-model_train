@@ -12,17 +12,20 @@
     "substeps_params":
     [
         {
-            "substep_name":"create_data_for_train.ipynb",
+            "substep_name":"prepare_files_for_train_detector.ipynb",
             "substep_params":
             {
-                "MAX_SIZE"     : 640,
-                "BATCH"        : 32,
-                "WORKERS"      : 0,
-                "SEED"         : 42,
-                "EPOCH_COUNT"  : 3,
-                "MODEL_NAME"   : "yolox_s",
-                "optimizer_lr" : 0.0003,
-                "weight_decay" : 0.0001,
+                "train_params":
+                {
+                    "MAX_SIZE"     : 640,
+                    "BATCH"        : 32,
+                    "WORKERS"      : 0,
+                    "SEED"         : 42,
+                    "EPOCH_COUNT"  : 1,
+                    "MODEL_NAME"   : "yolox_s",
+                    "optimizer_lr" : 0.0003,
+                    "weight_decay" : 0.0001
+                },
                 "pretrain_weights": "https://download.openmmlab.com/mmdetection/v2.0/yolox/yolox_s_8x8_300e_coco/yolox_s_8x8_300e_coco_20211121_095711-4592a793.pth"
             }
         },

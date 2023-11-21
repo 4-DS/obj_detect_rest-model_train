@@ -21,7 +21,8 @@
                 "SEED"         : 42,
                 "EPOCH_COUNT"  : 10,
                 "MODEL_NAME"   : "yolox_s",
-                "optimizer_lr" : 0.001,
+                "optimizer_lr" : 0.0003,
+                "weight_decay" : 0.0001,
                 "pretrain_weights": "https://download.openmmlab.com/mmdetection/v2.0/yolox/yolox_s_8x8_300e_coco/yolox_s_8x8_300e_coco_20211121_095711-4592a793.pth"
             }
         },

@@ -7,15 +7,8 @@
     },
     "step_params":
     {
-        "step_name": "model_train"
-    },
-    "substeps_params":
-    [
-        {
-            "substep_name":"prepare_files_for_train_detector.ipynb",
-            "substep_params":
-            {
-                "train_params":
+        "step_name": "model_train",
+        "train_params":
                 {
                     "MAX_SIZE"     : 640,
                     "BATCH"        : 32,
@@ -24,17 +17,34 @@
                     "EPOCH_COUNT"  : 1,
                     "MODEL_NAME"   : "yolox_s",
                     "optimizer_lr" : 0.0003,
-                    "weight_decay" : 0.0001
-                },
+                    "weight_decay" : 0.0001,
+                    "mmcv_normalize": {
+                        "mean": [
+                            123.675,
+                            116.28,
+                            103.53
+                        ],
+                        "std": [
+                            58.395,
+                            57.12,
+                            57.375
+                        ],
+                        "to_rgb": "TRUE"
+                    }
+                }
+    },
+    "substeps_params":
+    [
+        {
+            "substep_name":"prepare_files_for_train_detector.ipynb",
+            "substep_params":
+            {
                 "pretrain_weights": "https://download.openmmlab.com/mmdetection/v2.0/yolox/yolox_s_8x8_300e_coco/yolox_s_8x8_300e_coco_20211121_095711-4592a793.pth"
             }
         },
         {
             "substep_name":"train.ipynb",
-            "substep_params":
-            {
-                 "SEED"         : 42
-            }
+            "substep_params": {}
         }
     ]
 }

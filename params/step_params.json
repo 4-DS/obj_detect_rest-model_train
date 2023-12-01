@@ -37,10 +37,7 @@
     [
         {
             "substep_name":"prepare_files_for_train_detector.ipynb",
-            "substep_params":
-            {
-                "pretrain_weights": "https://download.openmmlab.com/mmdetection/v2.0/yolox/yolox_s_8x8_300e_coco/yolox_s_8x8_300e_coco_20211121_095711-4592a793.pth"
-            }
+            "substep_params": {}
         },
         {
             "substep_name":"train.ipynb",

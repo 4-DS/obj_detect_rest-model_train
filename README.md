@@ -1,5 +1,3 @@
-![interface model_train_interface.drawio](./imgs/model_train_interface.drawio.png)
-
 # Step CV-Pipeline: model_train [RU](README_RU.md)
 
 This CV-Pipeline component is intended for configuring model training, loading predtraining weights and starting model training

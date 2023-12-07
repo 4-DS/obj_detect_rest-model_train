@@ -2,22 +2,16 @@
 
 This CV-Pipeline component is intended for configuring model training, loading predtraining weights and starting model training
 
-Created based on [template](https://github.com/4-DS/step_template).
-In order not to forget about the required cells in each laptop, the easiest way to create new jupyter notebooks is simply by copying [`substep_full.ipynb`](https://github.com/4-DS/step_template/blob/main/substep_full.ipynb) from standard [template](https://github.com/4-DS/step_template).
-
 Input data for step CV-Pipeline: model_train
-- **train_data**     
-Training image dataset saved by parquets
+- **coco_train_dataset**     
+Training dataset
+- **coco_eval_dataset**     
+Validation dataset
+- **yolox_pth_pretrain_weights**     
+Predtraining weights
 
-- **eval_data**     
-Validation dataset of images saved by parquets
-
-- **train_eval_config**     
-Annotations and training and validation image dataset
-
-The final output of this step CV-Pipeline is
-- **model**     
-
+The output of this step CV-Pipeline is
+- **obj_detect_inference_files**     
 Saved weights of the trained model (weights of the last epoch and with the best achieved metrics), configuration files
 
 ## How to run a step CV-Pipeline: model_train

@@ -1,6 +1,6 @@
 # Step CV-Pipeline: model_train
 
-This CV-Pipeline component is intended for configuring model training, loading predtraining weights and starting model training
+This CV-Pipeline component is intended for configuring model training and starting model training
 
 Input data for step CV-Pipeline: model_train
 - **coco_train_dataset**     

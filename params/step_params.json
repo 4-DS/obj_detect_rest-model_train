@@ -16,9 +16,9 @@
                     "SEED"         : 42,
                     "EPOCH_COUNT"  : 1,
                     "MODEL_NAME"   : "yolox_s",
-                    "optimizer_lr" : 0.0003,
-                    "weight_decay" : 0.0001,
-                    "mmcv_normalize": {
+                    "OPTIMIZER_LR" : 0.0003,
+                    "WEIGHT_DECAY" : 0.0001,
+                    "MMCV_NORMALIZE": {
                         "mean": [
                             123.675,
                             116.28,

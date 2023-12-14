@@ -18,13 +18,13 @@ Saved weights of the trained model (weights of the last epoch and with the best 
 
 ### Create a directory for the project (or use an existing one)
 ```
-mkdir obj_detect_binary
-cd obj_detect_binary
+mkdir -p obj_detect_rest
+cd obj_detect_rest
 ```  
 
 ### clone the repository: model_train
 ```
-git clone --recurse-submodules https://github.com/4-DS/obj_detect_binary-model_train.git {dir_for_model_train}
+git clone --recurse-submodules https://github.com/4-DS/obj_detect_rest-model_train.git {dir_for_model_train}
 cd {dir_for_model_train}
 ```  
 

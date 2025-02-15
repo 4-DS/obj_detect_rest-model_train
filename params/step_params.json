@@ -1,0 +1,46 @@
+{
+    "pipeline_params":
+    {
+        "env_name":"user",
+        "pipeline_name":"obj_detect_rest",
+        "zone_name":"test"
+    },
+    "step_params":
+    {
+        "train_params":
+                {
+                    "MAX_SIZE"     : 640,
+                    "BATCH"        : 32,
+                    "WORKERS"      : 0,
+                    "SEED"         : 42,
+                    "EPOCH_COUNT"  : 1,
+                    "MODEL_NAME"   : "yolox_s",
+                    "OPTIMIZER_LR" : 0.0003,
+                    "WEIGHT_DECAY" : 0.0001,
+                    "MMCV_NORMALIZE": {
+                        "mean": [
+                            123.675,
+                            116.28,
+                            103.53
+                        ],
+                        "std": [
+                            58.395,
+                            57.12,
+                            57.375
+                        ],
+                        "to_rgb": "TRUE"
+                    }
+                }
+    },
+    "substeps_params":
+    [
+        {
+            "substep_name":"prepare_files_for_train_detector.ipynb",
+            "substep_params": {}
+        },
+        {
+            "substep_name":"train.ipynb",
+            "substep_params": {}
+        }
+    ]
+}
